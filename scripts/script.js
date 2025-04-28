@@ -1,5 +1,5 @@
 addEventListener("DOMContentLoaded", async function(){
-    const response = await fetch("https://torch-entertaining-supermarket.glitch.me/api/songs")
+    const response = await fetch("https://yummy-numerous-muscle.glitch.me/api/songs")
     const songs = await response.json()
 
     let html = ""
