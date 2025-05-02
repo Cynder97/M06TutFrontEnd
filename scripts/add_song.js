@@ -5,12 +5,12 @@ async function addSong(){
     const song = {
         title: document.querySelector("#title").value,
         artist: document.querySelector("#artist").value,
-        release: document.querySelector("#release").value,
+        releaseDate: document.querySelector("#released").value,
         popularity: document.querySelector("#popularity").value,
         genre: document.querySelector("#genre").value ? document.querySelector("#genre").value.split(",") : []
     }
 
-    const response = await fetch("https://yummy-numerous-muscle.glitch.me/api/songs", {
+    const response = await fetch("https://yummy-numerous-muscle.glitch.me/api/add_song", {
         method: "POST",
         headers:{
             "Content-Type" : "application/json"
