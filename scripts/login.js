@@ -10,8 +10,6 @@ document.addEventListener("DOMContentLoaded", () => {
     
 });
 
-
-
 async function login(username, password) {
     const login_cred = {
         username,
