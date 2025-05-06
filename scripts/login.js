@@ -12,7 +12,7 @@ async function login(username,password){
         username,
         password
     }
-    const response = await fetch("", {
+    const response = await fetch("https://yummy-numerous-muscle.glitch.me/api/auth/", {
         method: "POST",
         headers:{
             "Content-Type" : "application/json"

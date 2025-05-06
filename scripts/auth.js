@@ -1,3 +1,8 @@
+document.addEventListener("DOMContentLoaded", () => {
+    new Auth();
+});
+
+
 class Auth{
     constructor(){
         document.querySelector("body").style.display = "none"
