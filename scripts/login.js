@@ -1,12 +1,16 @@
 let token
 
-document.querySelector("#loginBtn").addEventListener("click", function (event) {
-    event.preventDefault();
-    console.log("Login button clicked, event prevented.");
-    
-    const username = document.querySelector("#username").value;
-    const password = document.querySelector("#password").value;
-    login(username, password);
+document.addEventListener("DOMContentLoaded", () => {
+    const loginButton = document.querySelector("#loginBtn");
+    if (loginButton) {
+        loginButton.addEventListener("click", function () {
+            const username = document.querySelector("#username").value;
+            const password = document.querySelector("#password").value;
+            login(username, password);
+        });
+    } else {
+        console.error("Login button not found in DOM!");
+    }
 });
 
 
