@@ -4,6 +4,7 @@ window.onload=function(){
 document.querySelector("#loginBtn").addEventListener("click",function(){
     const username = document.querySelector("#username").value
     const password = document.querySelector("#password").value
+    console.log(username + password);
     login(username,password)
 })}
 
