@@ -17,21 +17,19 @@ async function login(username, password) {
     };
 
     try {
-        console.log("Sending login request with:", username, password);
         const response = await fetch("https://yummy-numerous-muscle.glitch.me/api/auth/", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(login_cred)
         });
 
-        console.log("Response Status:", response.status); // Log response status
-
+        console.log("Response Status:", response.status);
         if (!response.ok) {
             throw new Error("Incorrect Username or Password");
         }
 
         const tokenResponse = await response.json();
-        console.log("Token Response:", tokenResponse); // Log received data
+        console.log("Token Response:", tokenResponse);
 
         localStorage.setItem("token", tokenResponse.token);
         localStorage.setItem("uname", tokenResponse.username2);
@@ -40,7 +38,7 @@ async function login(username, password) {
         window.location.replace("index.html");
 
     } catch (error) {
-        console.error("Login Error:", error); // Log the actual error
+        console.error("Login Error:", error);
     
         const errorMsgElement = document.querySelector("#errorMsg");
         if (errorMsgElement) {
