@@ -39,7 +39,14 @@ async function login(username, password) {
         window.location.replace("index.html");
 
     } catch (error) {
-        console.error("Login Error:", error); // Log actual error
-        document.querySelector("#errorMsg").innerHTML = error.message;
+        console.error("Login Error:", error); // Log the actual error
+    
+        const errorMsgElement = document.querySelector("#errorMsg");
+        if (errorMsgElement) {
+            errorMsgElement.innerHTML = "Incorrect Username or Password";
+        } else {
+            console.error("Error message element not found in the DOM.");
+        }
     }
+    
 }
