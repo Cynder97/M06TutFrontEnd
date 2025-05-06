@@ -1,16 +1,17 @@
 class Auth{
     constructor(){
-    const auth = localStorage.getItem("auth");
-
-    console.log("Auth value in localStorage:", auth);
-
-    if (auth !== "1") {
-        console.log("User not authenticated. Redirecting...");
-        window.location.replace("login.html");
-    } else {
-        document.querySelector("body").style.display = "block";
+        document.querySelector("body").style.display = "none"
+        const auth = localStorage.getItem("auth")
+        this.validateAuth(auth)
     }
-}
+    validateAuth(auth){
+        if(auth != 1){
+            window.location.replace("login.html")
+        }
+        else{
+            document.querySelector("body").style.display = "block"
+        }
+    }
     
     logOut(){
         localStorage.removeItem("auth")
