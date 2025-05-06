@@ -17,6 +17,7 @@ async function login(username, password) {
     };
 
     try {
+        console.log("Sending login request with:", username, password);
         const response = await fetch("https://yummy-numerous-muscle.glitch.me/api/auth/", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
