@@ -1,11 +1,13 @@
 let token
 
 document.addEventListener("DOMContentLoaded", () => {
-    document.querySelector("#loginBtn").addEventListener("click", function () {
+    document.querySelector("#loginBtn").addEventListener("click", function (event) {
+        event.preventDefault();
         const username = document.querySelector("#username").value;
         const password = document.querySelector("#password").value;
         login(username, password);
     });
+    
 });
 
 
