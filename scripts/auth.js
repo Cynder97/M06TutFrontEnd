@@ -5,7 +5,7 @@ class Auth{
         this.validateAuth(auth)
     }
     validateAuth(auth){
-        if(auth != 1){
+        if(auth !== 1){
             window.location.replace("login.html")
         }
         else{
