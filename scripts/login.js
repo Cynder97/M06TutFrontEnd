@@ -1,14 +1,14 @@
 let token
 
-document.addEventListener("DOMContentLoaded", () => {
-    document.querySelector("#loginBtn").addEventListener("click", function (event) {
-        event.preventDefault();
-        const username = document.querySelector("#username").value;
-        const password = document.querySelector("#password").value;
-        login(username, password);
-    });
+document.querySelector("#loginBtn").addEventListener("click", function (event) {
+    event.preventDefault();
+    console.log("Login button clicked, event prevented.");
     
+    const username = document.querySelector("#username").value;
+    const password = document.querySelector("#password").value;
+    login(username, password);
 });
+
 
 
 
